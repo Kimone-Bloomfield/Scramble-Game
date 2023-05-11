@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scramble Game</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="GameStyling.css" />
+  </head>
+  <script defer src="Functions.js"></script>
+
+  <body>
+    <div class="reg-con">
+      <fieldset>
+        <legend>Player Information Form</legend>
+        <form>
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            minlength="3"
+          /><br />
+
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            minlength="3"
+          /><br />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required /><br />
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" readonly /><br />
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option></select
+          ><br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern="[a-z0-9._%+-]+@gmail\.com$"
+          /><br />
+
+          <div id="regBtn-container">
+            <button
+              type="button"
+              id="RegisterBtn"
+              name="RegisterBtn"
+              onclick="Register()"
+            >
+              Register
+            </button>
+            <a href="#playarea-container">
+              <button type="button" id="StartBtn" onclick="playGame()" disabled>
+                Start
+              </button>
+            </a>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+
+    <!---------------------------------------PlayGame ------------------------ -->
+
+    <div id="playarea-container">
+      <div id="playarea-wrapper">
+        <h1>Scramble Game</h1>
+        <h3 style="color: red">Guess the word that was scrambled</h3>
+        <p id="play-area"></p>
+        <input
+          type="text"
+          id="answer-input"
+          placeholder="Enter your answer"
+          disabled
+        />
+        <div id="button-container">
+          <button id="check-answer-btn" onclick="checkAnswer()">Accept</button>
+          <button id="next-round-btn" onclick="nextRound()">Next</button>
+          <a href="#showpercentage">
+            <button id="percentage-btn" onclick="showpercentage()">
+              Percentage
+            </button>
+          </a>
+          <a href="#showpercentage">
+            <button id="end-btn" onclick="EndGame()">EndGame</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------------------Percentage Form ----------------------->
+    <div id="showpercentage" class="showpercentage">
+      <h1>Show Percentage</h1>
+      <div class="showpercentage-container"></div>
+    </div>
+
+    <!--------------------------------------- ShowAll ---------------------------------->
+    <div id="showall">
+      <h1>ShowAll</h1>
+      <div id="showall-container"></div>
+    </div>
+    <div id="Gender">
+      <h1>Gender Chart</h1>
+      <div class="Gender-wrapper">
+        <div id="gender-map">
+          <p>Female</p>
+          <span id="female-color"></span>
+          <p>Male</p>
+          <span id="male-color"></span>
+        </div>
+        <div class="graph-detail">
+          <div class="x-box"></div>
+          <div class="percentage-container">
+            <div id="male-percentage"></div>
+            <div id="female-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="frequency">
+      <div class="frequency-wrapper">
+        <h1>Percentage Chart</h1>
+        <div class="less_then_fifty"></div>
+        <div class="fifty"></div>
+
+        <div class="sixty"></div>
+        <div class="seventy"></div>
+        <div class="eighty"></div>
+        <div class="ninety"></div>
+        <div class="hundred"></div>
+      </div>
+      <div class="freq-map">
+        <div class="number_less_than_50"></div>
+        <div class="number50"></div>
+        <div class="number60"></div>
+        <div class="number70"></div>
+        <div class="number80"></div>
+        <div class="number90"></div>
+        <div class="number100"></div>
+      </div>
+    </div>
+  </body>
+</html>

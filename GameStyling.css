@@ -1,0 +1,572 @@
+/* GameStyling.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.reg-con {
+  background-image: url("./img1.jpg");
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+fieldset {
+  border: 1px solid;
+  padding: 20px;
+  max-width: 500px;
+  background-color: #d88ec2;
+  border-radius: 20px;
+}
+
+legend {
+  font-size: 25px;
+  font-weight: bold;
+  color: #441c1c;
+  border: 1px solid;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+label {
+  display: block;
+  color: black;
+  font-size: larger;
+  font-weight: 800;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="date"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 2px solid #333;
+  width: 500px;
+  height: 300px;
+  margin-top: 50px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#regBtn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#RegisterBtn,
+#StartBtn {
+  width: min(200px, 300px);
+}
+h1 {
+  text-align: center;
+}
+
+#play-area {
+  font-size: 24px;
+  text-align: center;
+}
+
+#answer-input {
+  display: block;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+#check-answer-btn,
+#next-round-btn,
+#end-btn,
+#percentage-btn {
+  display: block;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  width: 100px;
+}
+
+#check-answer-btn {
+  background-color: lightgreen;
+}
+#next-round-btn {
+  background-color: lightblue;
+}
+#end-btn {
+  background-color: lightcoral;
+}
+#percentage-btn {
+  background-color: cadetblue;
+}
+
+#check-answer-btn:hover,
+#next-round-btn:hover,
+#play-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  border: 1px solid;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#RegisterBtn {
+  background-color: lightgreen;
+}
+#EndBtn {
+  background-color: red;
+}
+#StartBtn {
+  background-color: lightcoral;
+}
+#AcceptBtn {
+  background-color: rgb(19, 122, 206);
+}
+#NextBtn {
+  background-color: rgb(168, 94, 202);
+}
+
+.showpercentage-container,
+#showall-container {
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  background-color: #d88ec2;
+
+  /* padding: 20px; */
+  width: min(600px, 80%);
+  height: 490px;
+  gap: 20px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+/* Set the width and height of the scrollbar */
+.showpercentage-container::-webkit-scrollbar,
+#showall-container::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+
+/* Track */
+.showpercentage-container::-webkit-scrollbar-track,
+#showall-container::-webkit-scrollbar-track {
+  background: whitesmoke;
+}
+
+/* Handle */
+.showpercentage-container::-webkit-scrollbar-thumb,
+#showall-container::-webkit-scrollbar-thumb {
+  background: darkslategray;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.showpercentage-container::-webkit-scrollbar-thumb:hover,
+#showall-container::-webkit-scrollbar-thumb::-webkit-scrollbar-thumb:hover {
+  background: darksalmon;
+}
+
+.showpercentage,
+#showall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+  background-image: url("./img1.jpg");
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  background-position: center center;
+}
+
+.showpercentage h1,
+#showall h1,
+#Gender h1,
+.freq-map h1 {
+  background-color: #333;
+  padding: 20px;
+  color: whitesmoke;
+}
+
+.showpercentage-wrapper {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  width: 65%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+
+  gap: 20px;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* -----------Play Area------------- */
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#playarea-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-image: url("./img1.jpg");
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  background-position: center center;
+}
+
+#playarea-wrapper {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  text-align: center;
+  width: min(490px, 80%);
+  height: min(400px, 600px);
+  border: 1px solid;
+  background-color: #d88ec2;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+}
+
+/* ----------------- */
+
+#female {
+  width: var(--female);
+  height: 80px;
+  background-color: pink;
+  text-align: center;
+  font-weight: 600;
+  color: whitesmoke;
+  border: 1px solid black;
+}
+#female:hover::after {
+  content: "#12";
+
+  width: fit-content;
+  padding: 8px;
+  background-color: gray;
+  border: 1px solid;
+  background-color: white;
+  border: 1px solid;
+  color: black;
+  border-radius: 25px;
+  right: 10%;
+}
+
+#male:hover::after {
+  content: "#5";
+  width: fit-content;
+  padding: 8px;
+  background-color: gray;
+  border: 1px solid;
+  background-color: white;
+  border: 1px solid;
+  color: black;
+  border-radius: 25px;
+  left: 0;
+
+  right: 10%;
+}
+
+#male {
+  color: whitesmoke;
+  text-align: center;
+  font-weight: 600;
+  width: var(--male);
+  height: 80px;
+  background-color: blue;
+  border: 1px solid black;
+  transition: all 1s;
+}
+
+#male,
+#female {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gender h1 {
+  background-color: lightslategray;
+  text-align: center;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+#gender {
+  text-align: center;
+  border: 1px solid #333;
+  padding: 10px;
+  background-color: whitesmoke;
+  transition: all 1s;
+}
+
+#Gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  background-image: url("./img1.jpg");
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+
+.Gender-wrapper {
+  background-color: white;
+  width: min(600px, 90%);
+  padding: 20px;
+}
+
+#gender-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#male-color {
+  background-color: blue;
+  width: 30px;
+  height: 15px;
+  display: block;
+}
+
+#female-color {
+  background-color: pink;
+  display: block;
+  width: 30px;
+  height: 15px;
+}
+.graph-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.percentage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.x-box {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    pink var(--female) var(--female),
+    blue var(--female) var(--male)
+  );
+  transition: all 2s;
+}
+/* -----------------frequency----------------- */
+
+.frequency {
+  background-image: url("./img1.jpg");
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  background-position: center center;
+  height: 100vh;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frequency-wrapper {
+  width: min(600px, 90%);
+  display: flex;
+  border: 1px solid;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+:root {
+  --female: 0%;
+  --male: 0%;
+  --fifty: 0%;
+  --sixty: 0%;
+  --seventy: 0%;
+  --eighty: 0%;
+  --ninety: 0%;
+  --hundred: 0%;
+  --less_then_fifty: 0%;
+}
+.fifty,
+.sixty,
+.seventy,
+.eighty,
+.ninety,
+.hundred,
+.less_then_fifty {
+  width: 50px;
+  height: 90px;
+  font-weight: 700;
+  font-size: larger;
+  border: 1px solid;
+
+  transition: width 2s;
+}
+
+.less_then_fifty {
+  background-color: red;
+  position: relative;
+  width: var(--less_then_fifty);
+  height: 40px;
+}
+.less_then_fifty::after {
+  content: "<50";
+  left: 10px;
+  position: absolute;
+}
+
+.fifty {
+  background-color: lightcoral;
+  position: relative;
+  width: var(--fifty);
+  height: 40px;
+}
+.fifty::after {
+  content: "50";
+  left: 10px;
+  position: absolute;
+}
+.sixty {
+  background-color: orange;
+  position: relative;
+  width: var(--sixty);
+  height: 40px;
+}
+.sixty::after {
+  content: "60";
+  left: 10px;
+  position: absolute;
+}
+
+.seventy {
+  background-color: blue;
+  position: relative;
+  width: var(--seventy);
+  height: 40px;
+}
+.seventy::after {
+  content: "70";
+  left: 10px;
+  position: absolute;
+}
+
+.eighty {
+  background-color: purple;
+  position: relative;
+  width: var(--eighty);
+  height: 40px;
+}
+
+.eighty::after {
+  content: "80";
+
+  left: 10px;
+  position: absolute;
+}
+.ninety {
+  background-color: greenyellow;
+  position: relative;
+  width: var(--ninety);
+  height: 40px;
+}
+.ninety::after {
+  content: "90";
+
+  left: 10px;
+  position: absolute;
+}
+.hundred {
+  background-color: green;
+  position: relative;
+  width: var(--hundred);
+  height: 40px;
+}
+.hundred::after {
+  content: "100";
+  left: 10px;
+  position: absolute;
+}
+.freq-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+}
